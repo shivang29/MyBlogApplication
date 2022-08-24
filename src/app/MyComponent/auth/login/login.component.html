@@ -1,0 +1,19 @@
+<br><br><br><br>
+
+<div class="container">
+    <form class="form-signin" [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+      <h1 class="h3 mb-3 font-weight-normal">Provide credentials for sign in</h1>
+      <div class="form-group mb-3">
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input type="text" id="inputUsername" [formControlName]="'username'" class="form-control" placeholder="Username" required="" autofocus="">
+      </div>
+      
+      <div class="form-group mb-3">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" [formControlName]="'password'" class="form-control" placeholder="Password" required="">
+      </div>
+      
+      <button class="btn btn-success" type="submit">Sign in</button>
+    </form>
+  </div>
+  

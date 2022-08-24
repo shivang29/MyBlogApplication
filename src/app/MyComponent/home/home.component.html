@@ -1,0 +1,26 @@
+<br><br><br><br>
+
+
+
+<div class="content" *ngIf="authService.isAuthenticated()">
+  <h3  class="text-start" >logged in : {{loggedin}}</h3>
+  <h1 class="text-center">All the blogs </h1>
+    <div class="container">
+      <div class="row" *ngFor="let post of posts | async">
+        <div class="blogpost">
+          <h3><a  href="/blog/{{post.title}}" class="blog-title">{{post.title}}</a></h3>
+          <div>
+            <i class="fas fa-user"><b>Blogger</b> :    {{post.username}}</i> 
+            
+          </div>
+          <br>
+          <!-- <p [innerHTML]="post.content"></p> -->
+          <!-- <div>
+            <a type="button" href="/blog/{{post.title}}" class="read-more btn btn-default">Go to the Blog Page</a>
+          </div> -->
+          <hr>
+        </div>
+       
+      </div>
+    </div>
+  </div>
